@@ -2,8 +2,6 @@ import React, {useState, useEffect} from 'react';
 import { 
   SafeAreaView, 
   FlatList,
-  Pressable,
-  Text
 } from 'react-native';
 import { FetchData } from '../fetchData';
 import { styles } from '../styles';
@@ -16,14 +14,6 @@ export const PhotoSection = () => {
       FetchData(setData)
   },[]);
 
-  const onPress =()=>{
-    updateData();
-  }
-
-  const updateData =()=>{
-    alert('clicked me');
-  }
-
   return (
     <SafeAreaView style={styles.container}>
       <FlatList 
@@ -32,10 +22,6 @@ export const PhotoSection = () => {
         renderItem = {renderItemHandler}
         keyExtractor = {(item) => item.id.toString()}
       />
-      <Pressable style={styles.button} onPress={ onPress }>
-        <Text>CLICK ME</Text>
-      </Pressable>
-        {/* // onPress={reorderEventHandler({data})} */}
     </SafeAreaView>
   );
 }

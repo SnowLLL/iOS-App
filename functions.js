@@ -4,6 +4,13 @@ import { ListItem } from "./components/listItem";
 export const renderItemHandler = ({item})=> {
     return <ListItem item ={item} />
   }
+  
+export const reorderHandler =()=>{
+    updateData();
+  }
+  const updateData =()=>{
+    alert('clicked me');
+  }
 
 // var newData=[];
 // export const reorderEventHandler = function (arr) {

@@ -39,6 +39,9 @@ export const styles = StyleSheet.create({
     },
 
     button:{
+      height:80,
+      alignItems: 'center',
+      justifyContent: 'center',
       paddingVertical: 12,
       paddingHorizontal: 32,
       borderRadius: 4,
