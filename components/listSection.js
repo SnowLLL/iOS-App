@@ -2,40 +2,40 @@ import React, {useState, useEffect} from 'react';
 import { 
   SafeAreaView, 
   FlatList,
-  Button
+  Pressable,
+  Text
 } from 'react-native';
-import { URL } from '../constants'
+import { FetchData } from '../fetchData';
 import { styles } from '../styles';
-import { ListItem } from './listItem'
-import { reorderEventHandler } from '../eventHandler'
+import { renderItemHandler } from '../functions'
 
 export const PhotoSection = () => {
   const [data, setData] = useState([])
-  fetch(URL,{
-            'Content-Type':'application/json'
-        })
-        .then(res=>res.json())
-        .then(resJson=>{
-          return setData(resJson)
-        }).catch(error=>{
-            console.log(error)
-        })
+
+  useEffect(()=>{
+      FetchData(setData)
+  },[]);
+
+  const onPress =()=>{
+    updateData();
+  }
+
+  const updateData =()=>{
+    alert('clicked me');
+  }
 
   return (
     <SafeAreaView style={styles.container}>
       <FlatList 
         data = {data}
         horizontal
-        renderItem = {({item})=>{
-          return <ListItem item ={item} />
-        }}
+        renderItem = {renderItemHandler}
         keyExtractor = {(item) => item.id.toString()}
       />
-      <Button 
-        title='CLICK ME'
-        color='black'
-        onPress={reorderEventHandler({data})}
-      />
+      <Pressable style={styles.button} onPress={ onPress }>
+        <Text>CLICK ME</Text>
+      </Pressable>
+        {/* // onPress={reorderEventHandler({data})} */}
     </SafeAreaView>
   );
 }

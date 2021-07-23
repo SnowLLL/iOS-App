@@ -1,0 +1,1 @@
+{"ast":null,"code":"export var URL = 'http://jsonplaceholder.typicode.com/SnowLLL/iOS-App/photos';","map":{"version":3,"sources":["/Users/ruxueliu/Desktop/iOS-App/constants.js"],"names":["URL"],"mappings":"AAAA,OAAO,IAAMA,GAAG,GAAG,4DAAZ","sourcesContent":["export const URL = 'http://jsonplaceholder.typicode.com/SnowLLL/iOS-App/photos'"]},"metadata":{},"sourceType":"module"}

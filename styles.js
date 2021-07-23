@@ -9,18 +9,23 @@ export const styles = StyleSheet.create({
     },
   
     text:{
-      width: 250,
+      width: 200,
+      color:'white',
       transform:[
         {rotate:'-30deg'},
-        {translateY: 180},
-        {translateX: -20},
+        {translateY: 300},
+        {translateX: 0},
       ]
     },
   
     shadow:{
-      shadowOpacity: 0.33,
+      shadowOffset:{
+        height:3,
+        width:1,
+      },
+      shadowOpacity: 0.2,
       shadowRadius: 3,
-      elevation: 3,
+      elevation: 1,
     },
   
     image: {
@@ -28,8 +33,16 @@ export const styles = StyleSheet.create({
       height: 360,
       margin: 10,
       overflow:'hidden',
-      borderRadius:80,
+      borderRadius:50,
       borderColor:'silver',
-      borderWidth:1,
+      borderWidth:2,
+    },
+
+    button:{
+      paddingVertical: 12,
+      paddingHorizontal: 32,
+      borderRadius: 4,
+      elevation: 3,
+      backgroundColor: 'orange'
     }
   });
