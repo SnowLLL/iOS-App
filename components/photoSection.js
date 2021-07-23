@@ -18,6 +18,7 @@ export const PhotoSection = () => {
     <SafeAreaView style={styles.container}>
       <FlatList 
         data = {data}
+        // create a horizontally scrollable list 
         horizontal
         renderItem = {renderItemHandler}
         keyExtractor = {(item) => item.id.toString()}

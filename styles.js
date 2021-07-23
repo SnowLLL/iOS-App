@@ -11,13 +11,15 @@ export const styles = StyleSheet.create({
     text:{
       width: 200,
       color:'white',
+      // have the “title” text written diagonally across the photo
       transform:[
         {rotate:'-30deg'},
         {translateY: 300},
         {translateX: 0},
       ]
     },
-  
+    
+    // have a drop shadow
     shadow:{
       shadowOffset:{
         height:3,
@@ -33,8 +35,10 @@ export const styles = StyleSheet.create({
       height: 360,
       margin: 10,
       overflow:'hidden',
+      // have rounded corners
       borderRadius:50,
       borderColor:'silver',
+      // have a border
       borderWidth:2,
     },
 

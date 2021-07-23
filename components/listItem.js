@@ -14,6 +14,7 @@ export const ListItem = ({item}) =>{
             style ={styles.image}
             source = {{
               uri: item.url,
+              // The photos that are downloaded must be cached
               cache: 'force-cache'
             }}
             resizeMode='cover'

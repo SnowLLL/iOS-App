@@ -12,6 +12,9 @@ export const reorderHandler =()=>{
     alert('clicked me');
   }
 
+// reorder the list in a completely random order
+// maxium call stack exceed
+
 // var newData=[];
 // export const reorderEventHandler = function (arr) {
 //     const randomNum = Math.floor(Math.random() * (arr.length - 0));
